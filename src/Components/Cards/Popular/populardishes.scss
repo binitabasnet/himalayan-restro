@@ -1,0 +1,27 @@
+.populardishes {
+  h1 {
+    font-weight: bolder;
+    span {
+      color: #ff9a1e;
+    }
+  }
+  p {
+    font-weight: bold;
+    color: #ff9a1e;
+    text-transform: capitalize;
+  }
+  .card {
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border: none;
+  }
+  .menu-title {
+    img {
+      height: 25px;
+      width: 25px;
+    }
+    span {
+      font-weight: bolder;
+      font-size: 1rem;
+    }
+  }
+}

@@ -1,0 +1,124 @@
+.book-table {
+  button {
+    background-color: #ff9a1e;
+    border: none;
+    //   width: 70%;
+    border-radius: 18px;
+  }
+  h3 {
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+  h4 {
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+  .card {
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border: none;
+    .form-control {
+      border: unset;
+    }
+
+    .date-title {
+      display: flex;
+      justify-content: space-between;
+      h4 {
+        font-weight: bold;
+        font-size: 1.2rem;
+      }
+    }
+    .time-select {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+      font-size: 1rem;
+      h4 {
+        font-weight: bold;
+        font-size: 1.2rem;
+        padding: 6px;
+      }
+      .time {
+        display: flex;
+        justify-content: space-around;
+        padding: 6px;
+        p {
+          border: 0.5px solid grey;
+          border-radius: 50%;
+          padding: 6px;
+          margin-top: 1rem;
+        }
+        span,
+        .am-pm {
+          padding: 6px;
+        }
+        span {
+          margin-top: 1rem;
+        }
+        .form-select {
+          border-radius: 40px;
+        }
+        .am-pm {
+          height: fit-content;
+          margin-top: 18px;
+          background-color: #f5f5f5;
+          border-radius: 30px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 30%;
+        }
+      }
+    }
+    .card-body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+      .dates {
+        padding: 20px;
+        margin: 8px;
+        h5,
+        span {
+          font-weight: bold;
+          font-size: 1rem;
+        }
+      }
+    }
+    .table-card {
+      display: flex;
+
+      .day {
+        box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+          rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+        padding: 6px;
+        border-radius: 2px;
+        margin: 10px;
+        height: 25px;
+        width: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        span {
+          font-weight: 900;
+          font-size: small;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 568px) {
+  .book-table {
+    button {
+      margin-bottom: 10px;
+    }
+    .card {
+      .card-body {
+        display: inline;
+        margin: auto;
+      }
+    }
+  }
+}

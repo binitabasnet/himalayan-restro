@@ -1,0 +1,29 @@
+.title-text {
+  background-color: #ff9a1e;
+  padding: 32px;
+  span {
+    font-weight: 800;
+  }
+  h1 {
+    font-weight: 900;
+    margin-top: 15px;
+    color: white;
+  }
+  p {
+    color: white;
+  }
+  .reserve {
+    margin-left: 86px;
+  }
+  button {
+    background-color: #2d2d2d;
+    border: #2d2d2d;
+    border-radius: 20px;
+  }
+}
+.reserve-img {
+  background: url("https://images.unsplash.com/photo-1585518419759-7fe2e0fbf8a6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fHJlc3RhdXJhbnRzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60")
+    center center no-repeat;
+  background-size: cover;
+  height: 339px;
+}

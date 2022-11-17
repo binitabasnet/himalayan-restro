@@ -1,0 +1,28 @@
+.work-section {
+  margin-top: 5rem;
+  .header {
+    h1 {
+      font-weight: bolder;
+      span {
+        color: #ff9a1e;
+      }
+    }
+    p {
+      font-weight: bold;
+      color: #ff9a1e;
+      text-transform: capitalize;
+    }
+  }
+  .card {
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border: none;
+    img {
+      height: 50px;
+      width: 50px;
+    }
+    span {
+      color: #ff9a1e;
+      font-weight: 700;
+    }
+  }
+}
