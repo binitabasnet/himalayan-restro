@@ -8,7 +8,9 @@ const Banner = () => {
       <Row className="d-flex justify-content-center align-items-center banner">
         <Col md={6}>
           <div className="text-detail">
-            <h1>Himalayan Nepalese Restaurant And Cafe Inglewood</h1>
+            <h1>
+              Himalayan Nepalese <span>Restaurant And Cafe</span> Inglewood
+            </h1>
             <p className="mb-5">
               AUTHENTIC NEPALESE FOOD IN INGLEWOOD. DINE IN, TAKEAWAY & DELIVERY
             </p>

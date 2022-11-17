@@ -46,12 +46,17 @@
       margin-bottom: 22px;
       color: #ff9a1e;
     }
-    button {
-      margin-top: 10px;
-      background-color: #ff9a1e;
-      border: none;
-      width: 80%;
-      border-radius: 20px;
+    a {
+      text-decoration: none;
+      display: flex;
+      justify-content: center;
+      button {
+        margin-top: 10px;
+        background-color: #ff9a1e;
+        border: none;
+        width: 80%;
+        border-radius: 20px;
+      }
     }
   }
 }

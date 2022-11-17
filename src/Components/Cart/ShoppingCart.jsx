@@ -3,6 +3,7 @@ import { Button, Card, Col, Container, Row } from "react-bootstrap";
 import "./shopcart.scss";
 import { IoMdAdd } from "react-icons/io";
 import { GrFormSubtract } from "react-icons/gr";
+import { Link } from "react-router-dom";
 
 const ShoppingCart = () => {
   return (
@@ -116,7 +117,9 @@ const ShoppingCart = () => {
                   <span>$ 25</span>
                 </Col>
               </Row>
-              <Button className="m-auto">Proceed To Checkout</Button>
+              <Link to="/checkout">
+                <Button className="m-auto">Proceed To Checkout</Button>
+              </Link>
             </Card>
           </Col>
         </Row>
