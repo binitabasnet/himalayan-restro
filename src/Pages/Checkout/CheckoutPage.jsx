@@ -28,24 +28,6 @@ const CheckoutPage = () => {
                   />
                   <hr />
                 </Form.Group>
-                <Row>
-                  <Col md={6}>
-                    <Form.Group className="mb-3" controlId="formBasicCity">
-                      <Form.Control type="text" placeholder="City" required />
-                      <hr />
-                    </Form.Group>
-                  </Col>
-                  <Col md={6}>
-                    <Form.Group className="mb-4" controlId="formBasicNumber">
-                      <Form.Control
-                        type="number"
-                        placeholder="No of members"
-                        required
-                      />
-                      <hr />
-                    </Form.Group>
-                  </Col>
-                </Row>
               </Form>
             </Card>
           </Col>

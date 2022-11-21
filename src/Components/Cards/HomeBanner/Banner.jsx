@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Col, Container, Row } from "react-bootstrap";
+import { Button, Card, Col, Container, Row } from "react-bootstrap";
 import "./banner.scss";
 
 const Banner = () => {
@@ -27,6 +27,10 @@ const Banner = () => {
           />
         </Col>
       </Row>
+      <div className="contact-cards">
+        <Card></Card>
+
+      </div>
     </Container>
   );
 };

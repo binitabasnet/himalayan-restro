@@ -12,6 +12,10 @@
         font-size: 1.1rem;
         font-weight: bolder;
       }
+      .nav-link:hover {
+        text-decoration: underline;
+        color: #ff9a1e;
+      }
     }
   }
 }
