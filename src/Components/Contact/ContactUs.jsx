@@ -9,11 +9,11 @@ import { Link } from "react-router-dom";
 const ContactUs = () => {
   return (
     <>
-      <Container fluid>
-        <div className="contact-us mt-5">
+      <Container fluid className="contact">
+        <div className="contact-us">
           <Container>
             <Row className="d-flex justify-content-center align-item-center">
-              <h3 className="text-center mb-5">GET IN TOUCH</h3>
+              <h3 className="text-center mt-5 mb-5">GET IN TOUCH</h3>
 
               <Col md={4} className="text-center">
                 <div className="d-flex justify-content-center align-item-center">
@@ -79,77 +79,77 @@ const ContactUs = () => {
                   </li>
                 </ul>
               </Col>
-              <Col md={4} className="text-center">
+              <Col md={4} className="text-center mb-3">
                 <div className="d-flex justify-content-center align-item-center">
                   <div className="box mb-3 ">
-                    <CiMail className="contact-icon " />
+                    <CiMail className="contact-icon" />
                   </div>
                 </div>
                 <h5>EMAIL</h5>
 
                 <br />
-                <strong> info@himalayanrestaurant.com.au</strong>
+                <strong>info@himalayanrestaurant.com.au</strong>
               </Col>
             </Row>
           </Container>
         </div>
-        <Container fluid className="sign-in">
-          <Row className="d-flex justify-content-center align-items-center py-5">
-            <Col md={7}>
-              <img
-                src="https://img.freepik.com/free-vector/home-screen-concept-illustration_114360-4703.jpg?w=740&t=st=1669185388~exp=1669185988~hmac=548d8fcfa96d8cde0dd9faa5b98cc3a15ea2c3a3682ab404c93ed59d2411f72d"
-                alt=""
-                className="mt-3 mb-3"
-              />
-            </Col>
-            <Col md={5}>
-              <div className="login pb-4">
-                <div className="login-box shadow-md bg-white p-4 mt-4">
-                  <h3 className="mb-3">
-                    <b>Contact us</b>
-                  </h3>
-                  <Form>
-                    <Form.Group className="mb-4" controlId="formBasicName">
-                      <Form.Control
-                        type="text"
-                        className="fontAwesome"
-                        placeholder="&#xf007; &nbsp; &nbsp;Name"
-                        required
-                      />
-                    </Form.Group>
-                    <Form.Group className="mb-3" controlId="formBasicEmail">
-                      <Form.Control
-                        type="email"
-                        className="fontAwesome"
-                        placeholder="&#xf0e0; &nbsp; &nbsp;Email"
-                        required
-                      />
-                    </Form.Group>
-                    <Form.Group
-                      className="mb-3"
-                      controlId="exampleForm.ControlTextarea1"
-                    >
-                      <Form.Control
-                        as="textarea"
-                        className="fontAwesome"
-                        rows={3}
-                        placeholder="Message..."
-                      />
-                    </Form.Group>
+      </Container>
+      <Container fluid className="sign-in">
+        <Row className="d-flex justify-content-center align-items-center py-5">
+          <Col md={7}>
+            <img
+              src="https://img.freepik.com/free-vector/home-screen-concept-illustration_114360-4703.jpg?w=740&t=st=1669185388~exp=1669185988~hmac=548d8fcfa96d8cde0dd9faa5b98cc3a15ea2c3a3682ab404c93ed59d2411f72d"
+              alt=""
+              className="mt-3 mb-3"
+            />
+          </Col>
+          <Col md={5}>
+            <div className="login pb-4">
+              <div className="login-box shadow-md bg-white p-4 mt-4">
+                <h3 className="mb-3">
+                  <b>Contact us</b>
+                </h3>
+                <Form>
+                  <Form.Group className="mb-4" controlId="formBasicName">
+                    <Form.Control
+                      type="text"
+                      className="fontAwesome"
+                      placeholder="&#xf007; &nbsp; &nbsp;Name"
+                      required
+                    />
+                  </Form.Group>
+                  <Form.Group className="mb-3" controlId="formBasicEmail">
+                    <Form.Control
+                      type="email"
+                      className="fontAwesome"
+                      placeholder="&#xf0e0; &nbsp; &nbsp;Email"
+                      required
+                    />
+                  </Form.Group>
+                  <Form.Group
+                    className="mb-3"
+                    controlId="exampleForm.ControlTextarea1"
+                  >
+                    <Form.Control
+                      as="textarea"
+                      className="fontAwesome"
+                      rows={3}
+                      placeholder="Message..."
+                    />
+                  </Form.Group>
 
-                    <Button
-                      variant="primary"
-                      className="m-auto d-block w-100 mb-2"
-                      type="submit"
-                    >
-                      Submit
-                    </Button>
-                  </Form>
-                </div>
+                  <Button
+                    variant="primary"
+                    className="m-auto d-block w-100 mb-2"
+                    type="submit"
+                  >
+                    Submit
+                  </Button>
+                </Form>
               </div>
-            </Col>
-          </Row>
-        </Container>
+            </div>
+          </Col>
+        </Row>
       </Container>
 
       <div className="row map">
