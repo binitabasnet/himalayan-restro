@@ -4,7 +4,7 @@ import "./testimony.scss";
 
 const Testimony = () => {
   return (
-    <Container className="testimony-card">
+    <Container className="testimony-card mb-5">
       <div className="header text-center mb-5">
         <p>Testimonials</p>
         <h1>

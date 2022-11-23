@@ -5,7 +5,7 @@ import "./reserve.scss";
 const Reservation = () => {
   return (
     <>
-      <Row className="mt-5 d-flex justify-content-center align-items-center">
+      <Row className="mt-5 mb-5 d-flex justify-content-center align-items-center">
         <Col md={6} className="title-text">
           <Container className="reserve">
             <div>

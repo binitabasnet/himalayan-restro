@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 const ShoppingCart = () => {
   return (
     <>
-      <Container className="shop-cart mt-5">
+      <Container className="shop-cart mt-5 mb-5">
         <Row>
           <Col md={8}>
             <Card className="p-3">

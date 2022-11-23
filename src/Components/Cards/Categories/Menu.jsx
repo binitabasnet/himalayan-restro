@@ -4,7 +4,7 @@ import "./menu.scss";
 
 const Menu = () => {
   return (
-    <Container className="menus">
+    <Container className="menus mb-5">
       <Row>
         <div className="text-center mb-5">
           <p>Top Categories</p>

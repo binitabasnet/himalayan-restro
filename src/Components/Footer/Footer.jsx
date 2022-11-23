@@ -1,10 +1,11 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import "./footer.scss";
 
 const Footer = () => {
   return (
-    <div className="footer-section mt-5">
+    <div className="footer-section">
       <Container>
         <Row>
           <Col md={3}>
@@ -23,7 +24,10 @@ const Footer = () => {
             <h4>Support</h4>
             <ul className="list-unstyled">
               <li>Get Help</li>
-              <li>Contact us</li>
+              <Link to="/contactus">
+                <li>Contact us</li>
+              </Link>
+
               <li>Feedback</li>
             </ul>
           </Col>

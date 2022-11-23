@@ -5,7 +5,7 @@ import "./booktable.scss";
 
 const BookTable = () => {
   return (
-    <Container className="book-table mt-5">
+    <Container className="book-table mt-5 mb-5">
       <h3>Date and Time</h3>
       <Row>
         <Col md={8}>

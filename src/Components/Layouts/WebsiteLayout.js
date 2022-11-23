@@ -18,7 +18,7 @@ const WebsiteLayout = ({ children }) => {
             className="justify-content-end"
           >
             <Nav className="">
-              <Nav.Link href="#features">Gallery</Nav.Link>
+              <Nav.Link href="/gallery">Gallery</Nav.Link>
               <Nav.Link href="#pricing">About Us</Nav.Link>
               {/* <NavDropdown title="Services" id="collasible-nav-dropdown">
                 <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
