@@ -5,7 +5,7 @@ import "./populardishes.scss";
 const PopularDishes = () => {
   return (
     <>
-      <Container className="populardishes">
+      <Container className="populardishes mt-5">
         <Row>
           <div className="text-center mb-5">
             <p>Featured Dishes</p>
@@ -15,7 +15,7 @@ const PopularDishes = () => {
           </div>
 
           <Col md={3}>
-            <Card>
+            <Card className="mb-3">
               <Card.Title>
                 <Card.Img
                   variant="top"
@@ -39,7 +39,7 @@ const PopularDishes = () => {
             </Card>
           </Col>
           <Col md={3}>
-            <Card>
+            <Card className="mb-3">
               <Card.Title>
                 <Card.Img
                   variant="top"
@@ -63,7 +63,7 @@ const PopularDishes = () => {
             </Card>
           </Col>
           <Col md={3}>
-            <Card>
+            <Card className="mb-3">
               <Card.Title>
                 <Card.Img
                   variant="top"
@@ -87,7 +87,7 @@ const PopularDishes = () => {
             </Card>
           </Col>
           <Col md={3}>
-            <Card>
+            <Card className="mb-3">
               <Card.Title>
                 <Card.Img
                   variant="top"

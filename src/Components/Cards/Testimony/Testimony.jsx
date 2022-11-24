@@ -14,7 +14,7 @@ const Testimony = () => {
 
       <Row className="testimony-content">
         <Col md={4}>
-          <Card>
+          <Card className="mb-3">
             <Row className="p-3">
               <Col md={5} className="m-auto">
                 <div className="testimony-img">
@@ -36,7 +36,7 @@ const Testimony = () => {
           </Card>
         </Col>
         <Col md={4}>
-          <Card>
+          <Card className="mb-3">
             <Row className="p-3">
               <Col md={5} className="m-auto">
                 <div className="testimony-img">
@@ -58,7 +58,7 @@ const Testimony = () => {
           </Card>
         </Col>
         <Col md={4}>
-          <Card>
+          <Card className="mb-3">
             <Row className="p-3">
               <Col md={5} className="m-auto">
                 <div className="testimony-img">

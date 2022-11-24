@@ -5,17 +5,18 @@ import PopularDishes from "../../Components/Cards/Popular/PopularDishes";
 import Testimony from "../../Components/Cards/Testimony/Testimony";
 import Work from "../../Components/Cards/Work/Work";
 import Reservation from "../../Components/Reserve/Reservation";
+import "./home.scss";
 
 const Home = () => {
   return (
-    <>
+    <div className="landingpage">
       <Banner />
       <PopularDishes />
       <Categories />
       <Reservation />
       <Work />
       <Testimony />
-    </>
+    </div>
   );
 };
 

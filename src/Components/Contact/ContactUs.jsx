@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 
 const ContactUs = () => {
   return (
-    <>
+    <div className="contactpage">
       <Container fluid className="contact">
         <div className="contact-us p-2">
           <Container className="p-2">
@@ -177,7 +177,7 @@ const ContactUs = () => {
           referrerpolicy="no-referrer-when-downgrade"
         ></iframe>
       </div>
-    </>
+    </div>
   );
 };
 

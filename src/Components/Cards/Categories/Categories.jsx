@@ -22,7 +22,7 @@ const Categories = () => {
         </div>
 
         <Col md={3}>
-          <Card>
+          <Card className="mb-3">
             <Card.Title>
               <Card.Img
                 variant="top"
@@ -46,7 +46,7 @@ const Categories = () => {
           </Card>
         </Col>
         <Col md={3}>
-          <Card>
+          <Card className="mb-3">
             <Card.Title>
               <Card.Img
                 variant="top"
@@ -70,7 +70,7 @@ const Categories = () => {
           </Card>
         </Col>
         <Col md={3}>
-          <Card>
+          <Card className="mb-3">
             <Card.Title>
               <Card.Img
                 variant="top"
@@ -94,7 +94,7 @@ const Categories = () => {
           </Card>
         </Col>
         <Col md={3}>
-          <Card>
+          <Card className="mb-3">
             <Card.Title>
               <Card.Img
                 variant="top"

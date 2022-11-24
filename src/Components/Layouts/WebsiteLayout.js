@@ -6,22 +6,23 @@ import Footer from "../Footer/Footer";
 
 const WebsiteLayout = ({ children }) => {
   return (
-    <div className="home-page">
-      <Navbar collapseOnSelect expand="lg" className="home">
-        <Container>
-          <Navbar.Brand href="/">
-            <img src="images/logo-1.png" alt="logo" />
-          </Navbar.Brand>
-          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-          <Navbar.Collapse
-            id="responsive-navbar-nav"
-            className="justify-content-end"
-          >
-            <Nav className="">
-              <Nav.Link href="/gallery">Gallery</Nav.Link>
-              <Nav.Link href="/aboutus">About Us</Nav.Link>
-              <Nav.Link href="/contactus">Contact Us</Nav.Link>
-              {/* <NavDropdown title="Services" id="collasible-nav-dropdown">
+    <>
+      <div className="position-relative">
+        <Navbar collapseOnSelect expand="lg" className="home">
+          <Container>
+            <Navbar.Brand href="/">
+              <img src="images/logo-1.png" alt="logo" />
+            </Navbar.Brand>
+            <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+            <Navbar.Collapse
+              id="responsive-navbar-nav"
+              className="justify-content-end"
+            >
+              <Nav className="">
+                <Nav.Link href="/gallery">Gallery</Nav.Link>
+                <Nav.Link href="/aboutus">About Us</Nav.Link>
+                <Nav.Link href="/contactus">Contact Us</Nav.Link>
+                {/* <NavDropdown title="Services" id="collasible-nav-dropdown">
                 <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.2">
                   Another action
@@ -34,21 +35,22 @@ const WebsiteLayout = ({ children }) => {
                   Separated link
                 </NavDropdown.Item>
               </NavDropdown> */}
-              <Nav.Link href="/menu">Order now</Nav.Link>
-              <Nav.Link eventKey={2} href="/reserve">
-                Reservation
-              </Nav.Link>
-              <Nav.Link href="/cart">
-                <AiOutlineShoppingCart />
-              </Nav.Link>
-            </Nav>
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
-      <div>{children}</div>
-      {/* footer here */}
+                <Nav.Link href="/menu">Order now</Nav.Link>
+                <Nav.Link eventKey={2} href="/reserve">
+                  Reservation
+                </Nav.Link>
+                <Nav.Link href="/cart">
+                  <AiOutlineShoppingCart />
+                </Nav.Link>
+              </Nav>
+            </Navbar.Collapse>
+          </Container>
+        </Navbar>
+        {children}
+      </div>
+
       <Footer />
-    </div>
+    </>
   );
 };
 

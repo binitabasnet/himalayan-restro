@@ -1,117 +1,111 @@
-.contact {
-  background-image: linear-gradient(
-    to right top,
-    rgb(241 206 194 / 37%),
-    rgb(229 198 201 / 18%),
-    rgba(247, 241, 244, 0.631372549),
-    rgba(245, 243, 245, 0.6901960784),
-    rgba(245, 245, 245, 0.8588235294)
-  );
+.contactpage {
+  overflow-x: hidden;
+  .contact {
+    background-image: linear-gradient(
+      to right top,
+      rgb(241 206 194 / 37%),
+      rgb(229 198 201 / 18%),
+      rgba(247, 241, 244, 0.631372549),
+      rgba(245, 243, 245, 0.6901960784),
+      rgba(245, 245, 245, 0.8588235294)
+    );
 
-  .contact-us {
-    h3 {
-      font-size: 1.9rem;
-      font-weight: bolder;
-    }
-    h5 {
-      font-size: 1.2rem;
-      font-weight: bolder;
-    }
-    strong {
-      font-size: 1rem;
-    }
-    ul {
-      li {
-        margin-bottom: 1.5rem;
-        a {
-          text-decoration: none;
-          color: black;
+    .contact-us {
+      h3 {
+        font-size: 1.9rem;
+        font-weight: bolder;
+      }
+      h5 {
+        font-size: 1.2rem;
+        font-weight: bolder;
+      }
+      strong {
+        font-size: 1rem;
+      }
+      ul {
+        li {
+          margin-bottom: 1.5rem;
+          a {
+            text-decoration: none;
+            color: black;
+          }
+        }
+      }
+      .box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #ff9a1e;
+        height: 60px;
+        width: 60px;
+        border-radius: 50%;
+        border: 0.5px solid #ff9a1e;
+        .contact-icon {
+          color: #ffff;
         }
       }
     }
-    .box {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: #ff9a1e;
-      height: 60px;
-      width: 60px;
-      border-radius: 50%;
-      border: 0.5px solid #ff9a1e;
-      .contact-icon {
-        color: #ffff;
-      }
-    }
   }
-}
 
-.sign-in {
-  // background-image: linear-gradient(
-  //   to left,
-  //   #f1f5f7,
-  //   #dfe9ed,
-  //   #e7f3f5,
-  //   #e6ebeb,
-  //   #def3ef
-  // );
-
-  img {
-    width: 100%;
-    object-fit: contain;
-    height: 450px;
-    border-radius: 10px;
-    // padding: 10px;
-  }
-  .login {
-    .fontAwesome {
-      font-family: Helvetica, "FontAwesome", sans-serif;
+  .sign-in {
+    img {
+      width: 100%;
+      object-fit: contain;
+      height: 450px;
+      border-radius: 10px;
+      // padding: 10px;
     }
-    .login-box {
-      // box-shadow: #dbdbdb 0 0 10px 0px;
-      width: 75%;
-      border-radius: 8px;
-      h1 {
-        color: hsl(249deg 97% 15%);
+    .login {
+      .fontAwesome {
+        font-family: Helvetica, "FontAwesome", sans-serif;
       }
-      .form-label {
-        font-size: 14px;
-        // color: #bbbfc6;
-      }
+      .login-box {
+        // box-shadow: #dbdbdb 0 0 10px 0px;
+        width: 75%;
+        border-radius: 8px;
+        h1 {
+          color: hsl(249deg 97% 15%);
+        }
+        .form-label {
+          font-size: 14px;
+          // color: #bbbfc6;
+        }
 
-      .form-control {
-        border-radius: 30px;
-        height: 40px;
-        background-color: #ced4da;
-        border: unset;
-      }
-      .fa-placholder {
-        font-family: "FontAwesome";
-      }
-      textarea.form-control {
-        height: 110px;
-      }
-      .form-text {
-        color: blue;
-      }
+        .form-control {
+          border-radius: 30px;
+          height: 40px;
+          background-color: #ced4da;
+          border: unset;
+        }
+        .fa-placholder {
+          font-family: "FontAwesome";
+        }
+        textarea.form-control {
+          height: 110px;
+        }
+        .form-text {
+          color: blue;
+        }
 
-      button {
-        border-radius: 30px;
-        height: 40px;
-        background-color: #ff9a1e;
-        border: none;
-      }
-      a {
-        text-decoration: none;
-      }
-      .message,
-      .error-text {
-        font-size: 12px;
-        color: red;
-        text-align: center;
-      }
-      .msg {
-        text-align: center;
-        margin-bottom: 10px;
+        button {
+          border-radius: 30px;
+          height: 40px;
+          background-color: #ff9a1e;
+          border: none;
+        }
+        a {
+          text-decoration: none;
+        }
+        .message,
+        .error-text {
+          font-size: 12px;
+          color: red;
+          text-align: center;
+        }
+        .msg {
+          text-align: center;
+          margin-bottom: 10px;
+        }
       }
     }
   }
