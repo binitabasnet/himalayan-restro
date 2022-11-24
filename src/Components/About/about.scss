@@ -1,0 +1,42 @@
+.aboutus {
+  h3 {
+    font-size: 1.9rem;
+    font-weight: bolder;
+    margin-bottom: 25px;
+  }
+  .card {
+    margin-bottom: 15px;
+
+    border: none;
+    background-color: rgb(188 217 178);
+  }
+  img {
+    width: 100%;
+    object-fit: cover;
+    height: 450px;
+    // border-radius: 10px;
+  }
+  p {
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: justify;
+  }
+  ul {
+    li {
+      h5 {
+        font-size: 1.2rem;
+        font-weight: bold;
+      }
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+  }
+}
+@media only screen and (max-width: 568px) {
+  .aboutus {
+    img {
+      margin-bottom: 15px;
+    }
+  }
+}

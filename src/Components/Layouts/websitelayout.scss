@@ -19,3 +19,15 @@
     }
   }
 }
+
+@media only screen and (max-width: 568px) {
+  .home-page {
+    .home {
+      a {
+        img {
+          height: 45px;
+        }
+      }
+    }
+  }
+}

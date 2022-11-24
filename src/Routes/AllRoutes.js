@@ -8,6 +8,7 @@ import BookTable from "../Pages/TableBooking.jsx/BookTable";
 import CheckoutPage from "../Pages/Checkout/CheckoutPage";
 import Gallery from "../Pages/Gallery/Gallery";
 import ContactUs from "../Components/Contact/ContactUs";
+import AboutUs from "../Components/About/AboutUs";
 
 const AllRoutes = () => {
   return (
@@ -65,6 +66,14 @@ const AllRoutes = () => {
         element={
           <WebsiteLayout>
             <ContactUs />
+          </WebsiteLayout>
+        }
+      />
+      <Route
+        path="/aboutus"
+        element={
+          <WebsiteLayout>
+            <AboutUs />
           </WebsiteLayout>
         }
       />

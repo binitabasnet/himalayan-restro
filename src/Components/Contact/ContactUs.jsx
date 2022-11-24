@@ -10,8 +10,8 @@ const ContactUs = () => {
   return (
     <>
       <Container fluid className="contact">
-        <div className="contact-us">
-          <Container>
+        <div className="contact-us p-2">
+          <Container className="p-2">
             <Row className="d-flex justify-content-center align-item-center">
               <h3 className="text-center mt-5 mb-5">GET IN TOUCH</h3>
 
@@ -29,6 +29,8 @@ const ContactUs = () => {
                       <br />
                       840 Beaufort Street Inglewood
                     </Link>
+                    <br />
+                    Inglewood, WA 6052
                   </li>
                   <li>
                     {" "}
@@ -37,6 +39,8 @@ const ContactUs = () => {
                       <br />
                       419 Albany Highway Victoria Park{" "}
                     </Link>
+                    <br />
+                    Victoria Park WA 6001
                   </li>
                   <li>
                     <Link to="#">
@@ -44,6 +48,8 @@ const ContactUs = () => {
                       <br />
                       1/634 Stirling Highway Mosman Park
                     </Link>
+                    <br />
+                    Mosman Park WA 6012
                   </li>
                 </ul>
               </Col>
@@ -57,6 +63,12 @@ const ContactUs = () => {
                 <h5>PHONE</h5>
 
                 <ul className="list-unstyled">
+                  <li>
+                    <Link to="#">
+                      <strong>General Enquiry</strong> <br />
+                      +61 4 1313 2934
+                    </Link>
+                  </li>
                   <li>
                     <Link to="#">
                       <strong>Inglewood</strong>
@@ -86,9 +98,10 @@ const ContactUs = () => {
                   </div>
                 </div>
                 <h5>EMAIL</h5>
-
-                <br />
-                <strong>info@himalayanrestaurant.com.au</strong>
+                <Link to="#" className="text-decoration-none text-black">
+                  <strong>Email Address</strong> <br />
+                  info@himalayanrestaurant.com.au
+                </Link>
               </Col>
             </Row>
           </Container>

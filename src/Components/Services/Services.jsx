@@ -4,14 +4,11 @@ import "./services.scss";
 
 const Services = () => {
   return (
-    <div className="services-section">
+    <div className="services-section ">
       <div className="overlay">
-        <Container>
-          <div className="text-center">
-            <h1>Our Services</h1>
-            <p>
-              How We <span>Work</span>
-            </p>
+        <Container className="p-4">
+          <div className="text-center pt-5">
+            <h3>Our Services</h3>
           </div>
 
           <Row className="services mt-5">

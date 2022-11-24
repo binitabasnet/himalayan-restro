@@ -19,7 +19,8 @@ const WebsiteLayout = ({ children }) => {
           >
             <Nav className="">
               <Nav.Link href="/gallery">Gallery</Nav.Link>
-              <Nav.Link href="#pricing">About Us</Nav.Link>
+              <Nav.Link href="/aboutus">About Us</Nav.Link>
+              <Nav.Link href="/contactus">Contact Us</Nav.Link>
               {/* <NavDropdown title="Services" id="collasible-nav-dropdown">
                 <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.2">
