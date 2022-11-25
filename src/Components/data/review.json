@@ -1,0 +1,34 @@
+{
+  "testimonials": [
+    {
+      "id": 1,
+      "name": "Hugh Dorey",
+      "description": "The food top quality. The staff attentive and very polite. Good to enjoy food from a different culture."
+    },
+    {
+      "id": 2,
+      "name": "David Easton",
+      "description": "Great food and service, staff were knowledgeable about the menu, provided courteous and friendly service. Our first time at this restaurant and we will definitely be returning."
+    },
+    {
+      "id": 3,
+      "name": "Carole Lyden",
+      "description": "Love the food in warm friendly surroundings. Recommend the dhall and prawn curry, absolutely delicious."
+    },
+    {
+      "id": 4,
+      "name": "Simon Feldman",
+      "description": "Super tasty and very spicy! Nice"
+    },
+    {
+      "id": 5,
+      "name": "Janine McKibbin",
+      "description": "Friendly service and lovely atmosphere. It is rare to find a restaurant where the dishes and service are so consistent. Delicious food and generous portions. A real find’"
+    },
+    {
+      "id": 6,
+      "name": "Alma Sa",
+      "description": "I went in late on Monday night and got the dahl to go. It is amazing, so flavorful definitely one of the best I've ever had. The food was ready really quickly and the service was very friendly. I will definitely be back and I'm looking forward to trying the other vegan items on the menu."
+    }
+  ]
+}

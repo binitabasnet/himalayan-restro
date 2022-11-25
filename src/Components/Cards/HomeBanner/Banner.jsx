@@ -22,12 +22,17 @@ const Banner = () => {
               </Button>
             </div>
           </Col>
-          <Col md={6}>
-            {/* <div className="ban-img"></div> */}
-            <img
-              src="https://img.freepik.com/free-photo/man-cook-holds-pan-with-vegetables-flying-air_613910-10109.jpg?w=740&t=st=1669285935~exp=1669286535~hmac=ce3847fba6b34bc6c42d12dba80943968e965596835e98640c4e49c8d604b252"
-              alt="banner-img"
-            />
+          <Col md={6} className="info-image">
+            <div className="ban-img"></div>
+            <div className="ban-box">
+              <div className="overlay">
+                <img
+                  src="https://i.pinimg.com/originals/e2/cf/80/e2cf80720b6352fa9e9b91e9bcb77206.png"
+                  alt="banner-img"
+                  className=""
+                />
+              </div>
+            </div>
           </Col>
         </Row>
         {/* <div className="contact-cards">
