@@ -26,11 +26,23 @@ const Banner = () => {
             <div className="ban-img"></div>
             <div className="ban-box">
               <div className="overlay">
-                <img
-                  src="https://i.pinimg.com/originals/e2/cf/80/e2cf80720b6352fa9e9b91e9bcb77206.png"
-                  alt="banner-img"
-                  className=""
-                />
+                <div className="item-one">
+                  <img src="images/biryani.png" alt="img-chicken" />
+                </div>
+                <div className="item-two">
+                  <img
+                    src="https://i.pinimg.com/originals/e2/cf/80/e2cf80720b6352fa9e9b91e9bcb77206.png"
+                    alt="banner-img"
+                    className=""
+                  />
+                </div>
+
+                <div className="item-three">
+                  <img
+                    src="https://www.esakha.com/files/product/image/360/onion_paratha-removebg-800x800.png"
+                    alt="burger"
+                  />
+                </div>
               </div>
             </div>
           </Col>
