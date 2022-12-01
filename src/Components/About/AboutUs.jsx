@@ -9,10 +9,7 @@ const AboutUs = () => {
       <Container className="aboutus p-4">
         <Row className="d-flex justify-content-center align-items-center">
           <Col md={6}>
-            <img
-              src="https://www.himalayanrestaurant.com.au/images/84331586405503296.jpeg"
-              alt="about-us"
-            />
+            <img src="images/owner.jpeg" alt="about-us" />
           </Col>
           <Col md={6}>
             <h3>About Us</h3>
@@ -41,10 +38,7 @@ const AboutUs = () => {
             </p>
           </Col>
           <Col md={6} className="order-1 order-sm-5">
-            <img
-              src="https://www.himalayanrestaurant.com.au/images/311586400527926.jpg"
-              alt="about-us"
-            />
+            <img src="images/himal.jpg" alt="about-us" />
           </Col>
         </Row>
       </Container>
@@ -52,10 +46,7 @@ const AboutUs = () => {
       <Container className="aboutus p-4">
         <Row className="d-flex justify-content-center align-items-center mt-5">
           <Col md={6}>
-            <img
-              src="https://www.himalayanrestaurant.com.au/images/311586400527926.jpg"
-              alt="about-us"
-            />
+            <img src="images/himal.jpg" alt="about-us" />
           </Col>
           <Col md={6}>
             <h3>Opening Hours</h3>
