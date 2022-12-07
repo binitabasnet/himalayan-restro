@@ -48,10 +48,7 @@ const Menu = () => {
         <Col md={3}>
           <Card>
             <Card.Title>
-              <Card.Img
-                variant="top"
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-BAv1U5o2glBoq6ckDac94Cp4-BanPknFpg&usqp=CAU"
-              />
+              <Card.Img variant="top" src="images/thali.png" />
             </Card.Title>
             <Card.Body>
               <Card.Title>
