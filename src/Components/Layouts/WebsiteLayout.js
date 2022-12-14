@@ -3,8 +3,20 @@ import { Container, Nav, Navbar } from "react-bootstrap";
 import "./websitelayout.scss";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import Footer from "../Footer/Footer";
+import { useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const WebsiteLayout = ({ children }) => {
+  const navigate = useNavigate();
+
+  const cart = useSelector((state) => state.cart);
+  const getTotalQuantity = () => {
+    let total = 0;
+    cart.forEach((item) => {
+      total += item.quantity;
+    });
+    return total;
+  };
   return (
     <>
       <div className="position-relative">
@@ -26,8 +38,9 @@ const WebsiteLayout = ({ children }) => {
                 <Nav.Link eventKey={2} href="/reserve">
                   Reservation
                 </Nav.Link>
-                <Nav.Link href="/cart">
-                  <AiOutlineShoppingCart />
+                <Nav.Link href="/cart" className="icon-wrap">
+                  <AiOutlineShoppingCart onClick={() => navigate("/cart")} />
+                  <p>{getTotalQuantity() || 0}</p>
                 </Nav.Link>
               </Nav>
             </Navbar.Collapse>

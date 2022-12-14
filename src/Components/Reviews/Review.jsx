@@ -79,8 +79,12 @@ const Review = () => {
             <SwiperSlide>
               {test.map((tests, k) => {
                 return (
-                  <Col md={4}>
-                    <Card className="mb-3" key={k}>
+                  <Col
+                    md={4}
+                    key={k}
+                    className="flex items-center justify-center"
+                  >
+                    <Card className="mb-3">
                       <Row className="p-3">
                         {/* <Col md={5} className="m-auto">
                           <div className="testimony-img">

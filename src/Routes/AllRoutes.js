@@ -9,6 +9,8 @@ import CheckoutPage from "../Pages/Checkout/CheckoutPage";
 import Gallery from "../Pages/Gallery/Gallery";
 import ContactUs from "../Components/Contact/ContactUs";
 import AboutUs from "../Components/About/AboutUs";
+import ShoppingCart from "../Components/Cart/ShoppingCart";
+import CartItem from "../Components/Cart/CartItem";
 
 const AllRoutes = () => {
   return (
@@ -25,7 +27,7 @@ const AllRoutes = () => {
         path="/cart"
         element={
           <WebsiteLayout>
-            <Cart />
+            <ShoppingCart />
           </WebsiteLayout>
         }
       />

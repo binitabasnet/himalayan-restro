@@ -24,6 +24,15 @@
       text-decoration: underline;
       color: #ff9a1e;
     }
+    .icon-wrap {
+      position: relative;
+    }
+    .icon-wrap p {
+      font-size: 0.9rem;
+      position: absolute;
+      top: -2px;
+      right: -2px;
+    }
   }
 }
 
