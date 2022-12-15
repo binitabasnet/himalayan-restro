@@ -1,11 +1,19 @@
 import React from "react";
-import { Card, Col, Container, Row } from "react-bootstrap";
+import { Card, Col, Row } from "react-bootstrap";
 import "./populardishes.scss";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../../../Redux/cartSlice";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const PopularDishes = ({ id, title, image, price }) => {
   const dispatch = useDispatch();
+
+  const handleAddToCart = (product) => {
+    dispatch(addToCart(product));
+    toast.success("item added to cart");
+  };
+
   return (
     <>
       <Col md={3}>
@@ -28,7 +36,7 @@ const PopularDishes = ({ id, title, image, price }) => {
                   alt="cart-img"
                   onClick={() =>
                     dispatch(
-                      addToCart({
+                      handleAddToCart({
                         id,
                         title,
                         image,

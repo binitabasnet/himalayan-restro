@@ -4,6 +4,7 @@ import { useSelector } from "react-redux";
 import CartItem from "./CartItem";
 import Total from "./Total";
 import "./shopcart.scss";
+import { ToastContainer } from "react-toastify";
 
 const ShoppingCart = () => {
   const cart = useSelector((state) => state.cart);
@@ -31,6 +32,13 @@ const ShoppingCart = () => {
           </Col>
         </Row>
       </Container>
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        closeOnClick
+        pauseOnHover
+        hideProgressBar
+      />
     </>
   );
 };

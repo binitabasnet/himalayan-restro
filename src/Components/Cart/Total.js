@@ -1,4 +1,4 @@
-import { Card } from "react-bootstrap";
+import { Button, Card } from "react-bootstrap";
 import { useSelector } from "react-redux";
 import "./total.scss";
 
@@ -24,6 +24,7 @@ function Total() {
             <strong>${getTotal().totalPrice}</strong>
           </p>
         </div>
+        <Button>Checkout</Button>
       </div>
     </Card>
   );

@@ -1,5 +1,6 @@
 import React from "react";
 import { Container, Row } from "react-bootstrap";
+import { ToastContainer } from "react-toastify";
 import Categories from "../../Components/Cards/Categories/Categories";
 import Banner from "../../Components/Cards/HomeBanner/Banner";
 import PopularDishes from "../../Components/Cards/Popular/PopularDishes";
@@ -66,6 +67,13 @@ const Home = () => {
       <Reservation />
       <Work />
       <Review />
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        closeOnClick
+        pauseOnHover
+        hideProgressBar
+      />
     </div>
   );
 };

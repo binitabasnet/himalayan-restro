@@ -8,9 +8,15 @@ import {
   removeItem,
 } from "../../Redux/cartSlice";
 import { useDispatch } from "react-redux";
+import { toast } from "react-toastify";
 
 function CartItem({ id, image, title, price, quantity = 0 }) {
   const dispatch = useDispatch();
+
+  const handleRemoveFromCart = (product) => {
+    toast.success("item removed");
+    dispatch(removeItem(product));
+  };
 
   return (
     <Card className="p-2 mb-3 ">
@@ -61,7 +67,7 @@ function CartItem({ id, image, title, price, quantity = 0 }) {
           <Button
             variant="outline-dark"
             className="cartItem__removeButton"
-            onClick={() => dispatch(removeItem(id))}
+            onClick={() => dispatch(handleRemoveFromCart(id))}
           >
             Remove
           </Button>
