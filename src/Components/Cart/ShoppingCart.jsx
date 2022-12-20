@@ -1,5 +1,13 @@
-import React from "react";
-import { Card, Col, Container, Row } from "react-bootstrap";
+import React, { useState } from "react";
+import {
+  Button,
+  Card,
+  Col,
+  Container,
+  Form,
+  Modal,
+  Row,
+} from "react-bootstrap";
 import { useSelector } from "react-redux";
 import CartItem from "./CartItem";
 import Total from "./Total";
@@ -8,6 +16,7 @@ import { ToastContainer } from "react-toastify";
 
 const ShoppingCart = () => {
   const cart = useSelector((state) => state.cart);
+
   return (
     <>
       <Container className="shop-cart mt-5 mb-5">
@@ -32,6 +41,7 @@ const ShoppingCart = () => {
           </Col>
         </Row>
       </Container>
+
       <ToastContainer
         position="top-right"
         autoClose={5000}
