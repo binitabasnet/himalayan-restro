@@ -11,6 +11,8 @@ import ContactUs from "../Components/Contact/ContactUs";
 import AboutUs from "../Components/About/AboutUs";
 import ShoppingCart from "../Components/Cart/ShoppingCart";
 import CartItem from "../Components/Cart/CartItem";
+import Login from "../Components/Login/Login";
+import Register from "../Components/Register/Register";
 
 const AllRoutes = () => {
   return (
@@ -76,6 +78,23 @@ const AllRoutes = () => {
         element={
           <WebsiteLayout>
             <AboutUs />
+          </WebsiteLayout>
+        }
+      />
+      <Route
+        path="/login"
+        element={
+          <WebsiteLayout>
+            {" "}
+            <Login />
+          </WebsiteLayout>
+        }
+      />
+      <Route
+        path="/signup"
+        element={
+          <WebsiteLayout>
+            <Register />
           </WebsiteLayout>
         }
       />

@@ -38,6 +38,8 @@ const WebsiteLayout = ({ children }) => {
                 <Nav.Link eventKey={2} href="/reserve">
                   Reservation
                 </Nav.Link>
+                <Nav.Link href="/login">Login</Nav.Link>
+                <Nav.Link href="/signup">Sign Up</Nav.Link>
                 <Nav.Link href="/cart" className="icon-wrap">
                   <AiOutlineShoppingCart onClick={() => navigate("/cart")} />
                   <p>{getTotalQuantity() || 0}</p>

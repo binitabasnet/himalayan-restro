@@ -82,7 +82,7 @@ function Total({ id, image, title, price, quantity = 0 }) {
       .post(
         "orders/confirm-order",
         {
-          id: 103,
+          id: 133,
           first_name: input.first,
           last_name: input.last,
           email: input.email,

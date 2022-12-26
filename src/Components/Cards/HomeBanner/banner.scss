@@ -20,6 +20,7 @@
       padding-bottom: 3rem !important;
 
       .text-detail {
+        animation: 2s slide-right;
         h1 {
           font-weight: bolder;
           font-size: 2.6rem;
@@ -33,6 +34,14 @@
           font-size: 1rem;
         }
       }
+      @keyframes slide-right {
+        from {
+          margin-left: -100%;
+        }
+        to {
+          margin-left: 0%;
+        }
+      }
       button {
         background-color: #ff9a1e;
         border: none;
@@ -43,6 +52,11 @@
         }
       }
       .info-image {
+        .ban-img,
+        .ban-box {
+          animation: 2s slide;
+        }
+
         .item-two {
           img {
             width: 100%;
@@ -91,6 +105,14 @@
             width: 100%;
             object-fit: contain;
           }
+        }
+      }
+      @keyframes slide {
+        from {
+          margin-left: 100%;
+        }
+        to {
+          margin-left: 0%;
         }
       }
     }
