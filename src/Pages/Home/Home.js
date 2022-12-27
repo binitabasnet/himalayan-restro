@@ -14,6 +14,7 @@ import { Navigation, Pagination } from "swiper";
 import "swiper/scss";
 import "swiper/scss/navigation";
 import "swiper/scss/pagination";
+import Offers from "../../Components/Offers/Offers";
 
 const Home = () => {
   const navigationPrevRef = React.useRef(null);
@@ -72,6 +73,7 @@ const Home = () => {
           ))}
         </Row>
       </Container>
+      <Offers />
       <Categories />
       <Reservation />
       <Work />
