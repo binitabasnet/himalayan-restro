@@ -5,10 +5,10 @@ import "./reserve.scss";
 const Reservation = () => {
   return (
     <>
-      <Row className="mt-5 mb-5 d-flex justify-content-center align-items-center">
-        <Col md={6} className="title-text">
-          <Container className="reserve">
-            <div>
+      <div>
+        <Row className="mt-5 mb-5 d-flex justify-content-center align-items-center">
+          <Col md={6} className="title-text">
+            <Container className="mx-5 px-5 reserve">
               <span>TABLE BOOKING</span>
               <h1>
                 Reserve Your <br /> Table
@@ -18,11 +18,11 @@ const Reservation = () => {
                 <br /> Quo vel temporibus corrupti iste mollitia
               </p>
               <Button>Book now</Button>
-            </div>
-          </Container>
-        </Col>
-        <Col md={6} className="reserve-img"></Col>
-      </Row>
+            </Container>
+          </Col>
+          <Col md={6} className="reserve-img"></Col>
+        </Row>
+      </div>
     </>
   );
 };
