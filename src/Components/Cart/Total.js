@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { Button, Card, Form, Modal } from "react-bootstrap";
+import { Button, Card, Col, Form, Modal, Row } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
@@ -82,7 +82,7 @@ function Total({ id, image, title, price, quantity = 0 }) {
       .post(
         "orders/confirm-order",
         {
-          id: 102,
+          id: 10,
           first_name: input.first,
           last_name: input.last,
           email: input.email,
@@ -90,7 +90,7 @@ function Total({ id, image, title, price, quantity = 0 }) {
           order_date: input.date,
           city: input.city,
           tel_number: input.phone,
-          cost: getTotal().totalPrice,
+          cost: getTotal().totalPrice + getTotal().totalQuantity * 3,
         },
         config
       )
@@ -121,11 +121,41 @@ function Total({ id, image, title, price, quantity = 0 }) {
           <h3>ORDER SUMMARY</h3>
           <div>
             <p className="total__p">
-              Total ({getTotal().totalQuantity} items) :{" "}
+              Sub Total ({getTotal().totalQuantity} items) :{" "}
               <strong>${getTotal().totalPrice}</strong>
             </p>
+            <p className="total__p">
+              Shipping Fee : <strong>${getTotal().totalQuantity * 3}</strong>
+            </p>
+            <Row>
+              <Col md={8}>
+                <Form>
+                  <input
+                    type="text"
+                    className="form-control mb-3"
+                    id="offer"
+                    placeholder="Enter Voucher Code"
+                    name="offer"
+                    value=""
+                  />
+                </Form>
+              </Col>
+              <Col md={4}>
+                {" "}
+                <Button className="mb-3">Apply</Button>
+              </Col>
+            </Row>
+
+            <p className="total__p">
+              Total :{" "}
+              <strong>
+                ${getTotal().totalPrice + getTotal().totalQuantity * 3}
+              </strong>
+            </p>
           </div>
-          <Button onClick={handleShow}>Checkout</Button>
+          <Button onClick={handleShow}>
+            Checkout({getTotal().totalQuantity})
+          </Button>
         </div>
       </Card>
       <Modal show={showModal} onHide={handleClose} size="md">
