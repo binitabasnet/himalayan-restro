@@ -9,13 +9,13 @@ import axios from "axios";
 
 const myStorage = window.localStorage;
 
-const PopularDishes = ({ id, title, image, price }) => {
+const PopularDishes = ({ id, name, image, price }) => {
   const dispatch = useDispatch();
   const [menus, setMenus] = useState([]);
   const [orderId, setOrderId] = useState();
-  const [cart, setCart] = useState([]);
+  // const [cart, setCart] = useState([]);
 
-  //  const handleCart = useSelector((state) => state.cart);
+  const cart = useSelector((state) => state.cart);
 
   const getTotalQuantity = () => {
     let total = 0;
@@ -29,7 +29,7 @@ const PopularDishes = ({ id, title, image, price }) => {
     const getMenus = async () => {
       const apiMenus = await axios.get("menus");
       setMenus(apiMenus.data);
-      console.log(menus);
+      // console.log(menus);
     };
     getMenus();
   }, [menus]);
@@ -44,45 +44,45 @@ const PopularDishes = ({ id, title, image, price }) => {
   };
 
   const handleAddToCart = (product) => {
-    // const order_id = Number(myStorage.getItem("orderId"));
+    const order_id = myStorage.getItem("orderId");
 
-    // if (order_id) {
-    //   console.log(order_id);
-    //   setOrderId(order_id);
-    // } else {
-    //   axios
-    //     .get("orders/get-order-id")
-    //     .then(function (response) {
-    //       setOrderId(response.data);
-    //       JSON.parse(myStorage.setItem("orderId", orderId));
-    //     })
-    //     .catch(function (error) {
-    //       console.error(error);
-    //     });
-    // }
+    if (!order_id) {
+      axios
+        .get("orders/get-order-id")
+        .then(function (response) {
+          setOrderId(response.data);
+          myStorage.setItem("orderId", response.data);
+        })
+        .catch(function (error) {
+          console.error(error);
+        });
+    } else {
+      console.log(order_id);
+      setOrderId(order_id);
+    }
 
-    // const orders = {
-    //   order_id: order_id,
-    //   menu_id: product.id,
-    //   quantity: getTotalQuantity() || 0,
-    // };
+    const orders = {
+      order_id: order_id,
+      menu_id: product.id,
+      quantity: getTotalQuantity() || 0,
+    };
 
-    // axios
-    //   .post("cart/order-item", orders, config)
-    //   .then(function (response) {
-    //     setCart(response.data.data);
-    //     console.log("cart", cart);
-    //   })
-    //   .catch(function (error) {
-    //     console.error(error);
-    //   });
+    axios
+      .post("cart/order-item", orders, config)
+      .then(function (response) {
+        cart(response.data.data);
+        // console.log("cart", cart);
+      })
+
+      .catch(function (error) {
+        console.error(error);
+      });
     dispatch(addToCart(product));
     toast.success("item added to cart");
   };
 
   return (
     <>
-      {/* {menus.map((item) => ( */}
       <Col md={3} key={id}>
         <Card className="mb-3">
           <Card.Title>
@@ -91,7 +91,7 @@ const PopularDishes = ({ id, title, image, price }) => {
           <Card.Body>
             <Card.Title>
               <div className="menu-title d-flex justify-content-between">
-                <span>{title}</span>
+                <span>{name}</span>
                 <img src="images/heart.png" alt="title" />
               </div>
             </Card.Title>
@@ -105,7 +105,7 @@ const PopularDishes = ({ id, title, image, price }) => {
                     dispatch(
                       handleAddToCart({
                         id,
-                        title,
+                        name,
                         image,
                         price,
                       })
@@ -117,7 +117,6 @@ const PopularDishes = ({ id, title, image, price }) => {
           </Card.Body>
         </Card>
       </Col>
-      {/* ))} */}
     </>
   );
 };

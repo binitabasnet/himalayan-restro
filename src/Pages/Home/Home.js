@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Container, Row } from "react-bootstrap";
 import { ToastContainer } from "react-toastify";
 import Categories from "../../Components/Cards/Categories/Categories";
@@ -15,41 +15,53 @@ import "swiper/scss";
 import "swiper/scss/navigation";
 import "swiper/scss/pagination";
 import Offers from "../../Components/Offers/Offers";
+import axios from "axios";
 
 const Home = () => {
   const navigationPrevRef = React.useRef(null);
   const navigationNextRef = React.useRef(null);
 
-  const food = {
-    products: [
-      {
-        id: 1,
-        image:
-          "https://img.freepik.com/free-photo/flat-lay-batch-cooking-composition_23-2148765597.jpg?w=2000",
-        price: 98,
-        title: "Momo",
-      },
-      {
-        id: 2,
-        image: "images/naan.png",
-        price: 100,
-        title: "Biryani",
-      },
-      {
-        id: 3,
-        image:
-          "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
-        price: 100,
-        title: "Naan",
-      },
-      {
-        id: 4,
-        image: "images/thali.png",
-        price: 200,
-        title: "Desserts",
-      },
-    ],
-  };
+  // const food = {
+  //   products: [
+  //     {
+  //       id: 1,
+  //       image:
+  //         "https://img.freepik.com/free-photo/flat-lay-batch-cooking-composition_23-2148765597.jpg?w=2000",
+  //       price: 98,
+  //       title: "Momo",
+  //     },
+  //     {
+  //       id: 2,
+  //       image: "images/naan.png",
+  //       price: 100,
+  //       title: "Biryani",
+  //     },
+  //     {
+  //       id: 3,
+  //       image:
+  //         "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+  //       price: 100,
+  //       title: "Naan",
+  //     },
+  //     {
+  //       id: 4,
+  //       image: "images/thali.png",
+  //       price: 200,
+  //       title: "Desserts",
+  //     },
+  //   ],
+  // };
+
+  const [menus, setMenus] = useState([]);
+  useEffect(() => {
+    const getMenus = async () => {
+      const apiMenus = await axios.get("menus");
+      setMenus(apiMenus.data);
+      // console.log(menus);
+    };
+    getMenus();
+  }, [menus]);
+
   return (
     <div className="landingpage">
       <Banner />
@@ -62,11 +74,11 @@ const Home = () => {
             </h1>
           </div>
           {/* <PopularDishes /> */}
-          {food.products?.map((fetchproduct) => (
+          {menus.map((fetchproduct) => (
             <PopularDishes
               key={fetchproduct.id}
               id={fetchproduct.id}
-              title={fetchproduct.title}
+              name={fetchproduct.name}
               price={fetchproduct.price}
               image={fetchproduct.image}
             />

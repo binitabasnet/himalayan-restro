@@ -11,12 +11,12 @@ const BookTable = () => {
   const [tables, setTables] = useState();
 
   useEffect(() => {
-    const getMenus = async () => {
-      const apiMenus = await axios.get("tables");
-      setTables(apiMenus.data);
-      //  console.log(tables);
+    const getTables = async () => {
+      const apiTables = await axios.get("tables");
+      setTables(apiTables.data);
+      // console.log(tables);
     };
-    getMenus();
+    getTables();
   }, [tables]);
 
   const navigate = useNavigate();
@@ -185,8 +185,8 @@ const BookTable = () => {
                   <br />
                   <Form.Select value={value} onChange={handleChange}>
                     {tables && tables.length > 0 ? (
-                      tables.map((table, i) => (
-                        <option value={table.name} key={i}>
+                      tables.map((table) => (
+                        <option value={table.id} key={table.id}>
                           {table.name}
                         </option>
                       ))

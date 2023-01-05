@@ -3,7 +3,11 @@ import Login from "../Login/Login";
 
 import { Button, Form } from "react-bootstrap";
 import "./register.scss";
+import axios from "axios";
+import { toast } from "react-toastify";
+import { IoLogoWindows } from "react-icons/io";
 
+const myStorage = window.localStorage;
 const Register = () => {
   // States for registration
   const [name, setName] = useState("");
@@ -39,13 +43,32 @@ const Register = () => {
     setSubmitted(false);
   };
   // Handling the form submission
+  const config = {
+    headers: {
+      "Content-Type": "application/json",
+      Accept: "application/json, text-plain, */*",
+      "X-Requested-With": "XMLHttpRequest",
+    },
+  };
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (name === "" || email === "" || password === cpassword) {
-      setError(true);
-    } else {
+    if (password === cpassword) {
+      axios
+        .post("/register", { name, email, password, cpassword }, config)
+        .then(function (response) {
+          // myStorage.setItem("token", `Bearer ${response.data.token}`);
+          // myStorage.setItem("user", response.data.user.name);
+          myStorage.setItem("user", response.data.name);
+          toast.success("Your Profile has been registered");
+          window.alert("profile registered");
+        })
+        .catch(function (error) {
+          console.error(error);
+        });
       setSubmitted(true);
       setError(false);
+    } else {
+      setError(true);
     }
   };
 
@@ -79,6 +102,7 @@ const Register = () => {
     );
   };
 
+  console.log({ name, email, password, cpassword });
   return (
     <>
       <div className="register container-fluid">
@@ -98,7 +122,7 @@ const Register = () => {
 
               <div className="d-flex justify-content-center align-items-center">
                 <div className="row mt-4  mr-20 ">
-                  <form>
+                  <Form onSubmit={handleSubmit}>
                     <div className="col-12 mb-3 ">
                       <input
                         type="text"
@@ -108,6 +132,8 @@ const Register = () => {
                         className="form-control"
                         onChange={handleName}
                         value={name}
+                        autoComplete="username"
+                        required
                       />
                     </div>
                     <div className="col-12 mb-3 ">
@@ -119,6 +145,8 @@ const Register = () => {
                         className="form-control"
                         onChange={handleEmail}
                         value={email}
+                        autoComplete="username email"
+                        required
                       />
                     </div>
                     <div className="col-12 mb-3">
@@ -130,17 +158,19 @@ const Register = () => {
                         className="form-control"
                         onChange={handlePassword}
                         value={password}
+                        autoComplete="new-password"
                       />
                     </div>
                     <div className="col-12 mb-3">
                       <input
                         type="password"
-                        name="pass"
-                        id="password"
+                        name="cpass"
+                        id="cpassword"
                         placeholder="Confirm Password"
                         className="form-control"
                         onChange={handleCpassword}
                         value={cpassword}
+                        autoComplete="true"
                       />
                     </div>
 
@@ -151,15 +181,11 @@ const Register = () => {
                       />
                     </div>
                     <div className="member-signup">
-                      <Button
-                        variant="success"
-                        type="submit"
-                        onClick={handleSubmit}
-                      >
+                      <Button variant="primary" type="submit">
                         Register
                       </Button>
                     </div>
-                  </form>
+                  </Form>
                 </div>
               </div>
             </>

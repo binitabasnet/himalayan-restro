@@ -3,11 +3,12 @@ import { useEffect, useState } from "react";
 import { Button, Card, Col, Form, Modal, Row } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { toast } from "react-toastify";
+import { toast, ToastContainer } from "react-toastify";
 import "./total.scss";
-import { removeItem } from "../../Redux/cartSlice";
+import { removeAll } from "../../Redux/cartSlice";
 
 const myStorage = window.localStorage;
+
 function Total({ id, image, title, price, quantity = 0 }) {
   const cart = useSelector((state) => state.cart);
   const getTotal = () => {
@@ -61,28 +62,35 @@ function Total({ id, image, title, price, quantity = 0 }) {
   //   dispatch(removeItem(product));
   // };
 
-  // useEffect(() => {
-  //   const order = Number(myStorage.getItem("orderId"));
-  //   axios
-  //     .get("cart/order-item/" + order)
-  //     .then(function (response) {
-  //       setCart(response.data.data);
-  //     })
-  //     .catch(function (error) {
-  //       console.error(error);
-  //     });
-  // });
+  useEffect(() => {
+    const order = Number(myStorage.getItem("orderId"));
+    axios
+      .get("cart/order-item/" + order)
+      .then(function (response) {
+        cart(response.data.data);
+      })
+      .catch(function (error) {
+        console.error(error);
+      });
+  });
 
+  const dispatch = useDispatch();
+
+  const handleRemoveAll = (product) => {
+    toast.success("all items removed");
+    dispatch(removeAll(product));
+  };
+
+  const foods = cart.map((item) => item.id);
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("user");
+
     const order_id = myStorage.getItem("orderId");
-    toast.success("Order-confirmed");
     axios
       .post(
         "orders/confirm-order",
         {
-          id: 10,
+          id: order_id,
           first_name: input.first,
           last_name: input.last,
           email: input.email,
@@ -95,15 +103,16 @@ function Total({ id, image, title, price, quantity = 0 }) {
         config
       )
       .then(function (response) {
+        setMessage(response.data);
         navigate("/");
         myStorage.removeItem("orderId");
-        window.location.reload();
-        setMessage(response.data);
-        console.log(response.data);
+        dispatchEvent(handleRemoveAll(foods));
       })
       .catch(function (error) {
         console.error(error);
       });
+
+    window.alert("Order-Placed");
   };
 
   const msgDiv = message ? (
@@ -286,6 +295,13 @@ function Total({ id, image, title, price, quantity = 0 }) {
           </Button>
         </Modal.Footer>
       </Modal>
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        closeOnClick
+        pauseOnHover
+        hideProgressBar
+      />
     </>
   );
 }
