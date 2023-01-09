@@ -105,14 +105,13 @@ function Total({ id, image, title, price, quantity = 0 }) {
       .then(function (response) {
         setMessage(response.data);
         navigate("/");
+        window.alert(response.data);
         myStorage.removeItem("orderId");
         dispatchEvent(handleRemoveAll(foods));
       })
       .catch(function (error) {
         console.error(error);
       });
-
-    window.alert("Order-Placed");
   };
 
   const msgDiv = message ? (
