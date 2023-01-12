@@ -25,3 +25,9 @@
   background-size: cover;
   height: 339px;
 }
+
+@media only screen and (max-width: 1200px) {
+  .reserve-img {
+    height: 371px;
+  }
+}

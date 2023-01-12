@@ -1,10 +1,19 @@
 import React from "react";
-import Menu from "../../Components/Cards/Categories/Menu";
+import { ToastContainer } from "react-toastify";
+
+import Categories from "../../Components/Cards/Categories/Categories";
 
 const MenuPage = () => {
   return (
     <>
-      <Menu />
+      <Categories />
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        closeOnClick
+        pauseOnHover
+        hideProgressBar
+      />
     </>
   );
 };
