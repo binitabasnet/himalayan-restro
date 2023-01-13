@@ -10,7 +10,7 @@ import Reservation from "../../Components/Reserve/Reservation";
 import Review from "../../Components/Reviews/Review";
 import "./home.scss";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination } from "swiper";
+import SwiperCore, { Autoplay, Navigation, Pagination } from "swiper";
 import "swiper/scss";
 import "swiper/scss/navigation";
 import "swiper/scss/pagination";
@@ -42,6 +42,8 @@ const Home = () => {
     const allTest = review();
     setTest(allTest);
   }, []);
+
+  SwiperCore.use([Autoplay, Navigation]);
 
   return (
     <div className="landingpage">
@@ -105,11 +107,12 @@ const Home = () => {
                 slidesPerView: 1,
               },
             }}
+            navigation
             modules={[Pagination, Navigation]}
-            navigation={{
-              prevEl: navigationPrevRef.current,
-              nextEl: navigationNextRef.current,
-            }}
+            // navigation={{
+            //   prevEl: navigationPrevRef.current,
+            //   nextEl: navigationNextRef.current,
+            // }}
             showsPagination={false}
             spaceBetween={32}
             slidesPerView={1}
@@ -121,16 +124,17 @@ const Home = () => {
               disableOnInteraction: false,
             }}
           >
-            <SwiperSlide className="">
-              {test.map((tests) => (
-                <Review
-                  // className="d-flex justify-content-center align-items-center"
-                  key={tests.id}
-                  name={tests.name}
-                  description={tests.description}
-                />
-              ))}
-            </SwiperSlide>
+            {test.map((tests) => {
+              return (
+                <SwiperSlide className="d-flex justify-content-center align-items-center">
+                  <Review
+                    key={tests.id}
+                    name={tests.name}
+                    description={tests.description}
+                  />
+                </SwiperSlide>
+              );
+            })}
           </Swiper>
         </Row>
       </Container>

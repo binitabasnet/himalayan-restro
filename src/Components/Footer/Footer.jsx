@@ -15,9 +15,15 @@ const Footer = () => {
           <Col md={3}>
             <h4>Menu</h4>
             <ul className="list-unstyled">
-              <li>About us</li>
-              <li>Reservation</li>
-              <li>Order now</li>
+              <li>
+                <Link to="/aboutus">About us</Link>
+              </li>
+              <li>
+                <Link to="/reserve">Reservation</Link>
+              </li>
+              <li>
+                <Link to="/menu">Order now</Link>
+              </li>
             </ul>
           </Col>
           <Col md={3}>
