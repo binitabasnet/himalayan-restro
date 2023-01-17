@@ -7,7 +7,7 @@ const Review = ({ id, name, description }) => {
   return (
     <>
       <div key={id} className="">
-        <div className="mb-3">
+        <Card className="mb-3">
           <div className="p-3 text-center">
             {/* <Col md={5} className="m-auto">
                           <div className="testimony-img">
@@ -23,7 +23,7 @@ const Review = ({ id, name, description }) => {
             <p className="mt-3">{description}</p>
             {/* </Col> */}
           </div>
-        </div>
+        </Card>
       </div>
     </>
   );

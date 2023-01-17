@@ -1,5 +1,6 @@
 import React from "react";
 import { Button, Card, Col, Container, Row } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import "./banner.scss";
 
 const Banner = () => {
@@ -18,7 +19,9 @@ const Banner = () => {
               </p>
 
               <Button className="m-2 p-2">
-                <span className="p-4">Order Now</span>
+                <Link to="/menu">
+                  <span className="p-4">Order Now</span>
+                </Link>
               </Button>
             </div>
           </Col>

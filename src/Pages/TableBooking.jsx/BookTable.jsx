@@ -79,8 +79,8 @@ const BookTable = () => {
         config
       )
       .then(function (response) {
-        // navigate("/");
-        window.location.reload();
+        navigate("/");
+        window.alert("Reserved");
         toast.success("reserved");
         setMessage(response.data);
         console.log(response.data);
