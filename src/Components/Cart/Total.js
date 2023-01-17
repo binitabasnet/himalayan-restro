@@ -204,7 +204,7 @@ function Total({ id, image, title, price, quantity = 0 }) {
               <div className="col-md-6 mb-3">
                 <label for="number">Phone Number</label>
                 <input
-                  type="text"
+                  type="phone"
                   onChange={onInputChange}
                   className="form-control"
                   id="phone"
