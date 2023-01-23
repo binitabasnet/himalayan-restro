@@ -14,6 +14,7 @@ import Total from "./Total";
 import "./shopcart.scss";
 import { toast, ToastContainer } from "react-toastify";
 import { removeAll } from "../../Redux/cartSlice";
+
 const ShoppingCart = () => {
   const cart = useSelector((state) => state.cart);
 
@@ -41,6 +42,7 @@ const ShoppingCart = () => {
                     name={item.name}
                     price={item.price}
                     quantity={item.quantity}
+                    description={item.description}
                   />
                 </>
               ))}

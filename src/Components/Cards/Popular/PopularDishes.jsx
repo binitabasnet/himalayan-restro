@@ -9,7 +9,7 @@ import axios from "axios";
 
 const myStorage = window.localStorage;
 
-const PopularDishes = ({ id, name, image, price }) => {
+const PopularDishes = ({ id, name, image, price, description }) => {
   const dispatch = useDispatch();
   const [menus, setMenus] = useState([]);
   const [orderId, setOrderId] = useState();
@@ -108,6 +108,7 @@ const PopularDishes = ({ id, name, image, price }) => {
                         name,
                         image,
                         price,
+                        description,
                       })
                     )
                   }

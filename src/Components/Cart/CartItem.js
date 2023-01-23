@@ -11,7 +11,7 @@ import {
 import { useDispatch } from "react-redux";
 import { toast } from "react-toastify";
 
-function CartItem({ id, image, name, price, quantity = 0 }) {
+function CartItem({ id, image, name, price, description, quantity = 0 }) {
   const dispatch = useDispatch();
 
   const handleRemoveFromCart = (product) => {
@@ -28,7 +28,7 @@ function CartItem({ id, image, name, price, quantity = 0 }) {
           </Col>
           <Col md={3} className="p-1 text-center">
             <h4 className="mb-0 mt-4">{name}</h4>
-            <p className="text-muted">lorem ipsum dot </p>
+            <p className="text-muted">{description}</p>
           </Col>
           <Col md={2} className="qty-calc p-1 text-center">
             <Button

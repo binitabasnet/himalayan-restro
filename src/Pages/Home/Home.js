@@ -64,6 +64,7 @@ const Home = () => {
               name={fetchproduct.name}
               price={fetchproduct.price}
               image={fetchproduct.image}
+              description={fetchproduct.description}
             />
           ))}
         </Row>
