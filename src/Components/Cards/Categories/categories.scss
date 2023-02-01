@@ -3,12 +3,14 @@
   h1 {
     font-weight: bolder;
     span {
-      color: #ff9a1e;
+      color: #2883b9;
+      // color: #ff9a1e;
     }
   }
   p {
     font-weight: bold;
-    color: #ff9a1e;
+    color: #2883b9;
+    // color: #ff9a1e;
     text-transform: capitalize;
   }
   .card {
@@ -35,7 +37,8 @@
         font-size: 0.9rem;
       }
       li:hover {
-        background-color: #ff9a1e;
+        background-color: #2883b9;
+        // background-color: #ff9a1e;
         border-radius: 20px;
       }
     }

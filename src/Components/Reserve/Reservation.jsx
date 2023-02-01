@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useState } from "react";
 import { Button, Col, Container, Form, Row } from "react-bootstrap";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import "./reserve.scss";
 
@@ -20,7 +20,9 @@ const Reservation = () => {
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 <br /> Quo vel temporibus corrupti iste mollitia
               </p>
-              <Button>Book now</Button>
+              <Link to="/reserve">
+                <Button>Book now</Button>
+              </Link>
             </Container>
           </Col>
           <Col md={6} className="reserve-img"></Col>

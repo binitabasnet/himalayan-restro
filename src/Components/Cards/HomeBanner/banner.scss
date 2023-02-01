@@ -26,7 +26,8 @@
           font-size: 2.6rem;
           margin-bottom: 20px;
           span {
-            color: #ff9a1e;
+            // color: #ff9a1e;
+            color: red;
           }
         }
         p {
@@ -43,7 +44,8 @@
         }
       }
       button {
-        background-color: #ff9a1e;
+        // background-color: #ff9a1e;
+        background-color: #2883b9;
         border: none;
         border-radius: 18px;
         a {
@@ -79,7 +81,8 @@
           height: 315px;
           width: 245px;
           border-radius: 400px 400px 0 0;
-          background-color: #ff9a1e;
+          // background-color: #ff9a1e;
+          background-color: #2883b9;
         }
         .ban-box {
           position: absolute;
@@ -89,7 +92,8 @@
           height: 315px;
           width: 245px;
           border-radius: 400px 400px 0 0;
-          border: 1.7px dashed #ff9a1e;
+          // border: 1.7px dashed #ff9a1e;
+          border: 1.7px dashed #2883b9;
         }
         .item-one {
           img {
