@@ -1,6 +1,15 @@
+// .parent {
+//   overflow: hidden;
+//   color: white;
+//   /* fallback for old browsers */
+//   // background: url("../../../public/images/chairs.jpg");
+//   background: url("../../../public/images/himal.jpg"); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+//   background-size: cover;
+//   background-repeat: no-repeat;
+// }
 .home {
   z-index: 2;
-  background-color: #7fbbdf;
+  background-color: #0e2439;
 
   // background-image: linear-gradient(
   //   to right top,
@@ -14,12 +23,14 @@
   a {
     img {
       height: 60px;
+      filter: opacity(0.5) drop-shadow(0 0 0 white);
     }
   }
   .navbar-nav {
     .nav-link {
       font-size: 1.1rem;
       font-weight: bolder;
+      color: white;
     }
     .nav-link:hover {
       text-decoration: underline;
