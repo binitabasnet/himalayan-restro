@@ -1,14 +1,15 @@
 .home {
   z-index: 2;
+  background-color: #7fbbdf;
 
-  background-image: linear-gradient(
-    to right top,
-    rgb(241 206 194 / 37%),
-    rgb(229 198 201 / 18%),
-    rgba(247, 241, 244, 0.631372549),
-    rgba(245, 243, 245, 0.6901960784),
-    rgba(245, 245, 245, 0.8588235294)
-  );
+  // background-image: linear-gradient(
+  //   to right top,
+  //   rgb(241 206 194 / 37%),
+  //   rgb(229 198 201 / 18%),
+  //   rgba(247, 241, 244, 0.631372549),
+  //   rgba(245, 243, 245, 0.6901960784),
+  //   rgba(245, 245, 245, 0.8588235294)
+  // );
   width: 100%;
   a {
     img {

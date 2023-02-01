@@ -2,13 +2,28 @@
   // background-image: url("../../../../public/images/wave.png");
   // background-size: cover;
   // background-repeat: no-repeat;
+  // background-image: linear-gradient(
+  //   to right top,
+  //   rgb(241 206 194 / 37%),
+  //   rgb(229 198 201 / 18%),
+  //   rgba(247, 241, 244, 0.631372549),
+  //   rgba(245, 243, 245, 0.6901960784),
+  //   rgba(245, 245, 245, 0.8588235294)
+  // );
   background-image: linear-gradient(
-    to right top,
-    rgb(241 206 194 / 37%),
-    rgb(229 198 201 / 18%),
-    rgba(247, 241, 244, 0.631372549),
-    rgba(245, 243, 245, 0.6901960784),
-    rgba(245, 245, 245, 0.8588235294)
+    to bottom,
+    #7fbbdf,
+    #94c7e4,
+    #a9d3ea,
+    #bedff0,
+    #d3ebf6,
+    #dbf0f8,
+    #e4f4fa,
+    #edf9fc,
+    #ebf8fa,
+    #e9f7f7,
+    #e7f5f4,
+    #e6f4f1
   );
 
   .back-pic {
@@ -27,7 +42,7 @@
           margin-bottom: 20px;
           span {
             // color: #ff9a1e;
-            color: red;
+            color: #ff0c0ccf;
           }
         }
         p {
