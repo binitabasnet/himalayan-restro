@@ -202,7 +202,7 @@ const BookTable = () => {
                     variant="primary"
                     type="submit"
                   >
-                    <span>Book Now</span>
+                    <span>Confirm Booking</span>
                   </Button>
                 </div>
               </div>
