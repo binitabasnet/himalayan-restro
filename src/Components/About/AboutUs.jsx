@@ -17,7 +17,7 @@ const AboutUs = () => {
               Himalayan Nepalese Restaurant and Cafe introduces the unique
               tastes of the Himalayas right in the middle of Victoria Park,
               Inglewood and Mosman Park. Our restaurants provide a friendly,
-              tranquil environment where you will hear the haunting sounds of
+              tranquil environment where you will hear the soothing sounds of
               the Himalayas. Sit back and enjoy the freshly created taste
               sensations that only Himalayan Nepalese Restaurant and Cafe can
               offer.
@@ -33,7 +33,7 @@ const AboutUs = () => {
               service. We Cater for Birthday, Corporate, Wedding and other
               functions. Over the years, we have successfully catered many
               weddings and receptions of over 200 guests both at our restaurants
-              and at customer's chosen venue. You can be assured to contact us
+              and at customer's choosen venue. You can be assured to contact us
               to arrange your next event.
             </p>
           </Col>

@@ -98,7 +98,7 @@ const ContactUs = () => {
                   </div>
                 </div>
                 <h5>EMAIL</h5>
-                <Link to="#" className="text-decoration-none text-black">
+                <Link to="#" className="text-decoration-none text-white">
                   <strong>Email Address</strong> <br />
                   info@himalayanrestaurant.com.au
                 </Link>

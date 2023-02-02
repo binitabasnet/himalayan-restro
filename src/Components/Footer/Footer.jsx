@@ -10,7 +10,7 @@ const Footer = () => {
         <Row>
           <Col md={3}>
             <h4>Himalayan Restro</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing</p>
+            <p>Serving authentic nepalese cuisine</p>
           </Col>
           <Col md={3}>
             <h4>Menu</h4>

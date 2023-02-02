@@ -1,14 +1,30 @@
 .contactpage {
   overflow-x: hidden;
   .contact {
+    color: #ffffff;
     background-image: linear-gradient(
-      to right top,
-      rgb(241 206 194 / 37%),
-      rgb(229 198 201 / 18%),
-      rgba(247, 241, 244, 0.631372549),
-      rgba(245, 243, 245, 0.6901960784),
-      rgba(245, 245, 245, 0.8588235294)
+      to bottom,
+      #0e2439,
+      #123049,
+      #153c5a,
+      #16496b,
+      #16567c,
+      #16567c,
+      #16567c,
+      #16567c,
+      #16496b,
+      #153c5a,
+      #123049,
+      #0e2439
     );
+    // background-image: linear-gradient(
+    //   to right top,
+    //   rgb(241 206 194 / 37%),
+    //   rgb(229 198 201 / 18%),
+    //   rgba(247, 241, 244, 0.631372549),
+    //   rgba(245, 243, 245, 0.6901960784),
+    //   rgba(245, 245, 245, 0.8588235294)
+    // );
 
     .contact-us {
       h3 {
@@ -27,7 +43,7 @@
           margin-bottom: 1.5rem;
           a {
             text-decoration: none;
-            color: black;
+            color: #ffffff;
           }
         }
       }
