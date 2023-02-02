@@ -23,7 +23,8 @@ const WebsiteLayout = ({ children }) => {
         <Navbar collapseOnSelect expand="lg" className="home">
           <Container>
             <Navbar.Brand href="/">
-              <img src="images/logo-1.png" alt="logo" />
+              <img src="images/Logo.png" alt="logo" />
+              &nbsp;Himalayan Nepalese Restaurant and Cafe
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse

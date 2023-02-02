@@ -56,14 +56,15 @@
           margin-bottom: 20px;
           color: white;
           span {
-            // color: #ff9a1e;
+            // color: #724f4f;
+
             color: rgb(255 82 82 / 81%);
           }
         }
         p {
           font-weight: bold;
           font-size: 1rem;
-          color: white;
+          color: #ffffff;
         }
       }
       @keyframes slide-right {
@@ -76,7 +77,7 @@
       }
       button {
         // background-color: #ff9a1e;
-        background-color: #2883b9;
+        background-color: #255e81;
         border: none;
         border-radius: 18px;
         a {
@@ -106,25 +107,25 @@
 
         .ban-img {
           position: absolute;
-          top: 4%;
+          top: 3%;
           left: 68%;
           /* transform: translate(-50%, -50%); */
           height: 315px;
           width: 245px;
           border-radius: 400px 400px 0 0;
           // background-color: #ff9a1e;
-          background-color: #2883b9;
+          background-color: #255e81;
         }
         .ban-box {
           position: absolute;
-          top: 4%;
+          top: 3%;
           left: 66%;
           /* transform: translate(-50%, -50%); */
           height: 315px;
           width: 245px;
           border-radius: 400px 400px 0 0;
           // border: 1.7px dashed #ff9a1e;
-          border: 1.7px dashed #2883b9;
+          border: 1.7px dashed #255e81;
         }
         .item-one {
           img {

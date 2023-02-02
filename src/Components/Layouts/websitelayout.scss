@@ -21,21 +21,31 @@
   // );
   width: 100%;
   a {
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: bolder;
     img {
       height: 60px;
-      filter: opacity(0.5) drop-shadow(0 0 0 white);
+      filter: opacity(1) drop-shadow(0 0 0 rgb(255, 255, 255));
     }
+    img:hover {
+      // color: #255e81;
+      filter: opacity(1) drop-shadow(0 0 0 #255e81);
+    }
+  }
+  a:hover {
+    color: #255e81;
   }
   .navbar-nav {
     .nav-link {
-      font-size: 1.1rem;
+      font-size: 1rem;
       font-weight: bolder;
       color: white;
     }
     .nav-link:hover {
       text-decoration: underline;
       // color: #ff9a1e;
-      color: #2883b9;
+      color: #255e81;
     }
     .icon-wrap {
       position: relative;

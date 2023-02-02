@@ -11,11 +11,11 @@ const Banner = () => {
           <Col md={6}>
             <div className="text-detail">
               <h1>
-                Himalayan Nepalese <span>Restaurant And Cafe</span> Inglewood
+                Himalayan <span>Nepalese </span>Restaurant And Cafe
               </h1>
               <p className="mb-5">
-                AUTHENTIC NEPALESE FOOD IN INGLEWOOD. DINE IN, TAKEAWAY &
-                DELIVERY
+                AUTHENTIC NEPALESE CUISINE. DINE IN,
+                <br /> TAKEAWAY & DELIVERY
               </p>
 
               <Button className="m-2 p-2">
