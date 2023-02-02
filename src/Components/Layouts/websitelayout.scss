@@ -62,8 +62,19 @@
 @media only screen and (max-width: 568px) {
   .home {
     a {
+      font-size: 0.7rem;
       img {
         height: 45px;
+      }
+    }
+    .navbar-toggler {
+      background-color: #fff;
+    }
+    .navbar-nav {
+      .icon-wrap {
+        p {
+          left: 16px;
+        }
       }
     }
   }
