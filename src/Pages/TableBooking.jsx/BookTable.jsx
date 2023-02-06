@@ -114,6 +114,7 @@ const BookTable = () => {
                     name="first"
                     value={input.first}
                     onChange={onInputChange}
+                    required
                   />
                 </div>
                 <div className="col-md-6 mb-3">
@@ -126,6 +127,7 @@ const BookTable = () => {
                     name="last"
                     placeholder="Last Name"
                     value={input.last}
+                    required
                   />
                 </div>
 
@@ -139,6 +141,7 @@ const BookTable = () => {
                     name="phone"
                     placeholder="Phone Number"
                     value={input.phone}
+                    required
                   />
                 </div>
 
@@ -152,6 +155,7 @@ const BookTable = () => {
                     value={input.email}
                     onChange={onInputChange}
                     placeholder="Email"
+                    required
                   />
                 </div>
                 <div className="col-md-6 mb-3">
@@ -164,6 +168,7 @@ const BookTable = () => {
                     value={input.guestno}
                     onChange={onInputChange}
                     placeholder="No of guests"
+                    required
                   />
                 </div>
 
@@ -177,6 +182,7 @@ const BookTable = () => {
                     onChange={onInputChange}
                     value={input.date}
                     className="form-control"
+                    required
                   />
                 </div>
                 <div className="col-md-6 mb-3">

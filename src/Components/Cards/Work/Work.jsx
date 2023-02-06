@@ -17,7 +17,7 @@ const Work = () => {
         <Col md={3}>
           <Card className="text-center mb-3">
             <Card.Title className="p-3">
-              <Card.Img variant="top" src="images/shopping-bag (3).png" />
+              <Card.Img variant="top" src="images/shopping-bag.png" />
             </Card.Title>
             <Card.Body>
               <Card.Title>
@@ -33,7 +33,7 @@ const Work = () => {
         <Col md={3}>
           <Card className="text-center mb-3">
             <Card.Title className="p-3">
-              <Card.Img variant="top" src="images/take-away(1).png" />
+              <Card.Img variant="top" src="images/take-away.png" />
             </Card.Title>
             <Card.Body>
               <Card.Title>
