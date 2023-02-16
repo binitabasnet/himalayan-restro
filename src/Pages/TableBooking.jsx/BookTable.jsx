@@ -192,7 +192,7 @@ const BookTable = () => {
                     {tables && tables.length > 0 ? (
                       tables.map((table) => (
                         <option value={table.id} key={table.id}>
-                          {table.name}
+                          {table.name}({table.guest_number} Guests)
                         </option>
                       ))
                     ) : (

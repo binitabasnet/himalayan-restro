@@ -274,6 +274,15 @@ function Total({ id, image, title, price, quantity = 0 }) {
                   className="form-control"
                 />
               </div>
+              <div className="col-md-6 mb-3">
+                <label for="date">Order Type</label>
+                <Form.Select>
+                  <option>select options</option>
+                  <option value="1">Delivery</option>
+                  <option value="2">Dine-in</option>
+                  <option value="3">Pickup</option>
+                </Form.Select>
+              </div>
               {msgDiv}
 
               <div className="">

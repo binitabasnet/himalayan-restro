@@ -92,7 +92,7 @@ const PopularDishes = ({ id, name, image, price, description }) => {
             <Card.Title>
               <div className="menu-title d-flex justify-content-between">
                 <span>{name}</span>
-                <img src="images/heart.png" alt="title" />
+                {/* <img src="images/heart.png" alt="title" /> */}
               </div>
             </Card.Title>
             <Card.Text>

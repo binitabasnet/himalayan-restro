@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Card, Col, Container, Row } from "react-bootstrap";
+import { Button, Card, Col, Container, Form, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "./banner.scss";
 
@@ -17,12 +17,17 @@ const Banner = () => {
                 AUTHENTIC NEPALESE CUISINE. DINE IN,
                 <br /> TAKEAWAY & DELIVERY
               </p>
-
-              <Button className="m-2 p-2">
+              <Form.Select className="text-white">
+                <option>Select Branch</option>
+                <option value="1">Mosman Park</option>
+                <option value="2">Inglewood</option>
+                <option value="3">Victoria Park</option>
+              </Form.Select>
+              {/* <Button className="m-2 p-2">
                 <Link to="/menu">
                   <span className="p-4">Order Now</span>
                 </Link>
-              </Button>
+              </Button> */}
             </div>
           </Col>
           <Col md={6} className="info-image">
