@@ -62,7 +62,7 @@ const Login = () => {
             {/* <Dashboard /> */}
           </div>
         ) : (
-          <>
+          <div className="login-card">
             <div className="header text-center">
               {/* <img src="/images/logo.jpg" className="logo mb-1" alt="..." /> */}
               <h2>Login</h2>
@@ -124,7 +124,7 @@ const Login = () => {
                 Create an account
               </Link>
             </div>
-          </>
+          </div>
         )}
       </div>
     </>
