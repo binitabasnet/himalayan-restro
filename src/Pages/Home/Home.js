@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Container, Row } from "react-bootstrap";
+import { Button, Col, Container, Form, Modal, Row } from "react-bootstrap";
 import { ToastContainer } from "react-toastify";
 import Categories from "../../Components/Cards/Categories/Categories";
 import Banner from "../../Components/Cards/HomeBanner/Banner";
@@ -17,6 +17,7 @@ import "swiper/scss/pagination";
 import Offers from "../../Components/Offers/Offers";
 import axios from "axios";
 import customerreview from "../../Components/data/review.json";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const navigationPrevRef = React.useRef(null);
@@ -45,6 +46,7 @@ const Home = () => {
 
   SwiperCore.use([Autoplay, Navigation]);
 
+  const [show, setShow] = useState(true);
   return (
     <div className="landingpage">
       <Banner />
@@ -139,6 +141,44 @@ const Home = () => {
           </Swiper>
         </Row>
       </Container>
+      <Modal show={show} onHide={() => setShow(false)} size="md">
+        <Modal.Header closeButton>
+          <Modal.Title>
+            <h4> Choose Your Order Type and location</h4>
+          </Modal.Title>
+        </Modal.Header>
+
+        <Modal.Body>
+          <Row className="m-3">
+            <Col>
+              <Form.Select>
+                <option>Select Branch</option>
+                <option value="1">Mosman Park</option>
+                <option value="2">Inglewood</option>
+                <option value="3">Victoria Park</option>
+              </Form.Select>
+            </Col>
+            <Col>
+              <Form.Select>
+                <option>Order Type</option>
+                <option value="1">Delivery</option>
+                <option value="2">Pick-Up</option>
+                <option value="3">Dine in</option>
+              </Form.Select>
+            </Col>
+          </Row>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="dark" className="m-1 p-1">
+            <Link to="/menu">
+              <span className="p-3 text-white">Order Now</span>
+            </Link>
+          </Button>
+          <Button variant="secondary" onClick={() => setShow(false)}>
+            Close
+          </Button>
+        </Modal.Footer>
+      </Modal>
       <ToastContainer
         position="top-right"
         autoClose={5000}
