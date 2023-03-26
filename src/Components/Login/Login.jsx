@@ -1,57 +1,91 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Button, Card, Col, Form, Row } from "react-bootstrap";
 import "./login.scss";
+import axios from "axios";
 
 const Login = () => {
   const [errorMessages, setErrorMessages] = useState({});
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   // User Login info
-  const data = [
-    {
-      username: "user1@gmail.com",
-      password: "pass1",
-    },
-    {
-      username: "user2@gmail.com",
-      password: "pass2",
-    },
-  ];
+  // const data = [
+  //   {
+  //     username: "user1@gmail.com",
+  //     password: "pass1",
+  //   },
+  //   {
+  //     username: "user2@gmail.com",
+  //     password: "pass2",
+  //   },
+  // ];
 
-  const errors = {
-    email: "invalid username",
-    pass: "invalid password",
-  };
+  // const errors = {
+  //   email: "invalid username",
+  //   pass: "invalid password",
+  // };
+
+  // const handleSubmit = (event) => {
+  //   //Prevent page reload
+  //   event.preventDefault();
+
+  //   var { email, pass } = document.forms[0];
+
+  //   // Find user login info
+  //   const userData = data.find((user) => user.username === email.value);
+
+  //   // Compare user info
+  //   if (userData) {
+  //     if (userData.password !== pass.value) {
+  //       // Invalid password
+  //       setErrorMessages({ name: "pass", message: errors.pass });
+  //     } else {
+  //       setIsSubmitted(true);
+  //     }
+  //   } else {
+  //     // Username not found
+  //     setErrorMessages({ name: "email", message: errors.email });
+  //   }
+  // };
+  const myStorage = window.localStorage;
+  const [message, setMessage] = useState();
+  let history = useNavigate();
 
   const handleSubmit = (event) => {
-    //Prevent page reload
     event.preventDefault();
-
-    var { email, pass } = document.forms[0];
-
-    // Find user login info
-    const userData = data.find((user) => user.username === email.value);
-
-    // Compare user info
-    if (userData) {
-      if (userData.password !== pass.value) {
-        // Invalid password
-        setErrorMessages({ name: "pass", message: errors.pass });
-      } else {
-        setIsSubmitted(true);
-      }
-    } else {
-      // Username not found
-      setErrorMessages({ name: "email", message: errors.email });
-    }
+    // setIsLoading(true);
+    var { email, password } = document.forms[0];
+    // const email = e.target.formBasicEmail;
+    // const password = e.target.formBasicPassword;
+    axios
+      .post("/auth/login", {
+        email: email.value,
+        password: password.value,
+      })
+      .then(function (response) {
+        myStorage.setItem("token", `Bearer ${response.data.token}`);
+        myStorage.setItem("user", response.data.user.name);
+        history("/");
+        console.log(response);
+      })
+      .catch(function (error) {
+        setMessage(error.response.data.message);
+      });
   };
 
+  const msgDiv = message ? (
+    <div className="msg">
+      <span className="error-text">Credential does not match</span>
+    </div>
+  ) : (
+    ""
+  );
+
   // error message
-  const renderErrorMessage = (name) =>
-    name === errorMessages.name && (
-      <div className="error text-danger">{errorMessages.message}</div>
-    );
+  // const renderErrorMessage = (name) =>
+  //   name === errorMessages.name && (
+  //     <div className="error text-danger">{errorMessages.message}</div>
+  //   );
 
   return (
     <>
@@ -80,7 +114,7 @@ const Login = () => {
                       className="form-control"
                       required
                     />
-                    {renderErrorMessage("email")}
+                    {/* {renderErrorMessage("email")} */}
                   </div>
                   <div className="col-12 mb-3">
                     <input
@@ -91,9 +125,9 @@ const Login = () => {
                       className="form-control"
                       required
                     />
-                    {renderErrorMessage("pass")}
+                    {/* {renderErrorMessage("pass")} */}
                   </div>
-
+                  {msgDiv}
                   <div className="label  mb-3">
                     <Row>
                       <Col>

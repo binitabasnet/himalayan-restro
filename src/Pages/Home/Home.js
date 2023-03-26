@@ -28,7 +28,7 @@ const Home = () => {
     const getMenus = async () => {
       const apiMenus = await axios.get("menus");
       setMenus(apiMenus.data);
-      // console.log(menus);
+      console.log(menus);
     };
     getMenus();
   }, [menus]);
