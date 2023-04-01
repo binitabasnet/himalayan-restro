@@ -1,11 +1,12 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Button, Card, Col, Form, Modal, Row } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
 import "./total.scss";
 import { removeAll } from "../../Redux/cartSlice";
+import LocationSelector from "./LocationSelector";
 
 const myStorage = window.localStorage;
 
@@ -27,6 +28,25 @@ function Total({ id, image, title, price, quantity = 0 }) {
   const [message, setMessage] = useState();
 
   const navigate = useNavigate();
+
+  // for google  location autocopmlete
+  const autoCompleteRef = useRef();
+  const inputRef = useRef();
+  const options = {
+    componentRestrictions: { country: "ng" },
+    fields: ["address_components", "geometry", "icon", "name"],
+    types: ["establishment"],
+  };
+  useEffect(() => {
+    autoCompleteRef.current = new window.google.maps.places.Autocomplete(
+      inputRef.current,
+      options
+    );
+    autoCompleteRef.current.addListener("place_changed", async function () {
+      const place = await autoCompleteRef.current.getPlace();
+      console.log({ place });
+    });
+  }, []);
 
   const [input, setInput] = useState({
     first: "",
@@ -240,6 +260,7 @@ function Total({ id, image, title, price, quantity = 0 }) {
               </div>
               <div className="col-md-6 mb-3">
                 <label for="address">Address</label>
+
                 <input
                   type="text"
                   className="form-control"
@@ -247,21 +268,16 @@ function Total({ id, image, title, price, quantity = 0 }) {
                   name="address"
                   onChange={onInputChange}
                   value={input.address}
+                  ref={inputRef}
                   placeholder="Address"
                 />
               </div>
+
+              {/* location selector test */}
               {/* <div className="col-md-6 mb-3">
-              <label for="Status">Status</label>
-              <input
-                type="text"
-                className="form-control"
-                id="status"
-                name="action"
-                value={input.action}
-                onChange={onInputChange}
-                placeholder="Status"
-              />
-            </div> */}
+                <LocationSelector />
+              </div> */}
+
               <div className="col-md-6 mb-3">
                 <label for="date">Date</label>
                 <input

@@ -20,7 +20,11 @@ const AboutUs = () => {
               tranquil environment where you will hear the soothing sounds of
               the Himalayas. Sit back and enjoy the freshly created taste
               sensations that only Himalayan Nepalese Restaurant and Cafe can
-              offer.
+              offer. Nepalese cuisine will invigorate your senses as it combines
+              great culinary traditions of the neighbouring countries of China
+              and India. The Nepalese are descendants of major migrations from
+              India, Tibet, North Burma and Yunnan via Assam. Nepalese dishes
+              thus exhibits this great diversity and cultural mix.
             </p>
           </Col>
         </Row>
