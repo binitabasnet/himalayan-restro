@@ -9,7 +9,7 @@ const Offers = () => {
         <div className="py-5">
           <h3 className="mt-5 mb-3">Happy Holidays !</h3>
           <h2 className="mb-3">Save 30% on all of your purchases. </h2>
-          <Button className="mb-5">SHOP NOW</Button>
+          <Button className="mb-5">ORDER NOW</Button>
         </div>
       </Container>
     </div>

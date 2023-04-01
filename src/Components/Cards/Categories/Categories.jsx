@@ -79,7 +79,7 @@ const Categories = ({ id, name, image, price }) => {
       console.log(categories);
     };
     getCategories();
-  }, [categories]);
+  }, []);
 
   return (
     <Container className="categories">
@@ -103,7 +103,7 @@ const Categories = ({ id, name, image, price }) => {
             <PopularDishes
               id={menus.id}
               name={menus.name}
-              image={menus.image}
+              image={"http://localhost:8000/storage/" + menus.image}
               price={menus.price}
             />
             // <Col md={3}>

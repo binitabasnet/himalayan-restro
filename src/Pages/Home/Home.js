@@ -31,7 +31,7 @@ const Home = () => {
       // console.log(menus);
     };
     getMenus();
-  }, [menus]);
+  }, []);
 
   const review = () => {
     return customerreview.testimonials;
@@ -65,7 +65,7 @@ const Home = () => {
               id={fetchproduct.id}
               name={fetchproduct.name}
               price={fetchproduct.price}
-              image={fetchproduct.image}
+              image={"http://localhost:8000/storage/" + fetchproduct.image}
               description={fetchproduct.description}
             />
           ))}

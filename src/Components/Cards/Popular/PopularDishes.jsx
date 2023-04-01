@@ -32,7 +32,7 @@ const PopularDishes = ({ id, name, image, price, description }) => {
       // console.log(menus);
     };
     getMenus();
-  }, [menus]);
+  }, []);
 
   const config = {
     headers: {
@@ -86,7 +86,11 @@ const PopularDishes = ({ id, name, image, price, description }) => {
       <Col md={3} key={id}>
         <Card className="mb-3">
           <Card.Title>
-            <Card.Img variant="top" src={image} />
+            <Card.Img
+              variant="top"
+              src={image}
+              style={{ height: "140px", objectFit: "cover" }}
+            />
           </Card.Title>
           <Card.Body>
             <Card.Title>
