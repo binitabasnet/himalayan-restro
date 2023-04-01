@@ -54,11 +54,11 @@ const Register = () => {
     e.preventDefault();
     if (password === cpassword) {
       axios
-        .post("/register", { name, email, password, cpassword }, config)
+        .post("/auth/register", { name, email, password, cpassword }, config)
         .then(function (response) {
-          // myStorage.setItem("token", `Bearer ${response.data.token}`);
-          // myStorage.setItem("user", response.data.user.name);
-          myStorage.setItem("user", response.data.name);
+          myStorage.setItem("token", `Bearer ${response.data.token}`);
+          myStorage.setItem("user", response.data.user.name);
+          // myStorage.setItem("user", response.data.name);
           toast.success("Your Profile has been registered");
           window.alert("profile registered");
         })
